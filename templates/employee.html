@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/myfile.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="container" align="center">
+    <h1>REGISTRATION FORM  </h1>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="register">
+    </form>
+
+</div>
+</body>
+</html>
